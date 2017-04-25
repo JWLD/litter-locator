@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.header {
+  width: 100%;
+  padding: 15px;
+  font: bold 20px Helvetica;
+  color: white;
+  background-color: #8BC74F;
+  box-shadow: 0 0 5px 1px #aaa;
+  position: fixed;
+}
+.postcode-search {
+  position: absolute;
+  top: 80px;
+  left: 5px;
+  width: calc(100vw - 10px);
+  height: 30px;
+  background-color: white;
+  /*color: #8BC74F;*/
+}
+.postcode-search input {
+  height: 100%;
+  border: 2px solid #8BC74F;
+  outline-width: 0;
+
+}
+
+.map-container iframe {
+  margin-top: -65px;
+  border: 0;
+  width: 100%;
+  height: calc(568px + 70px);
+}
