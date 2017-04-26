@@ -19,7 +19,7 @@ body {
   font: bold 20px Helvetica;
   color: white;
   background-color: #8BC74F;
-  box-shadow: 0 0 5px 1px #aaa;
+  box-shadow: 0 0 5px 1px #ccc;
 }
 
 .map-pin {
@@ -37,6 +37,7 @@ body {
   padding: 10px;
   box-shadow: 0 0 5px 1px #ccc;
   background-color: white;
+  border-radius: 2px;
 }
 
 .image-wrap {
@@ -65,9 +66,4 @@ body {
 
 .cleanup-icon {
   margin-right: 10px;
-}
-
-.section-title.discussion {
-  box-shadow: 0 2px 5px #aaa;
-  /*box-shadow: none;*/
 }
