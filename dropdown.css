@@ -1,0 +1,193 @@
+
+/* - v - DROPDOWN MENU - v -  */
+.header {
+  position: fixed;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  width: 100%;
+  z-index: 3;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header ul {
+  clear: both;
+  position: absolute;
+  top: 53px;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.header li a {
+  font: 16px Helvetica;
+  display: block;
+  padding: 10px 10px;
+  /*border: 3px solid rgba(1,1,1,0.05);*/
+  text-decoration: none;
+  color: #666;
+  /*color: #8BC74F;*/
+}
+.header li {
+  background-color: white;
+  box-shadow: 0 5px 1px #aaa;
+  margin: 10px;
+}
+
+.header li:last-child {
+  margin-bottom: 13px;
+}
+
+.header li a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* --hide dropdown as default --*/
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* add the icon and menu animations when the checkbox is clicked */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  right: 10px;
+  user-select: none;
+  padding: 0;
+  /*margin: 0 0 0 5em;*/
+
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  /*padding: 0;*/
+
+}
+
+.header .menu-icon .navicon:before {
+  top: -5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: 5px;
+}
+
+/*  */
+
+.header .menu-btn {
+  display: none;
+
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  /*padding: 0;*/
+
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  /*padding: 0;*/
+
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*.header .menu-btn:checked ~ .header ul {
+  display: block;
+}*/
+
+/* add responsive css to show the horizontal menu items for larger browser widths by default */
+
+@media (min-width: 768px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
