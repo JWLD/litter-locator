@@ -49,7 +49,7 @@ body {
   cursor: pointer;
   font: bold 8vw Helvetica;
   background-color: #ccc;
-  color: #dfffb3;
+  color: #555;
 }
 
 .nav-button:not(:last-child) {
