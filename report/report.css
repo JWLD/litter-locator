@@ -1,6 +1,6 @@
 /*** RESET ***/
 
-body, div, form, input, button, select {
+body, div, form, input, button, select, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -15,7 +15,10 @@ body, div, form, input, button, select {
 select:focus {
   outline: 0;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 /*** STYLE ***/
 
 body {
@@ -25,7 +28,9 @@ body {
 /* TITLE BAR */
 
 .section-title {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 60px;
   width: 100%;
   padding: 15px;

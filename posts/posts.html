@@ -8,22 +8,24 @@
   <title>Post Page</title>
   <link href="posts.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../dropdown.css" rel="stylesheet"/>
 </head>
 
 <body>
   <!-- PAGE HEADER -->
-  <div class="section-title">
-    <div class="fa fa-map-marker map-pin"></div>
-    BS9
+  <div class="section-title header">
+    <a href="../browse/browse.html">
+      <div class="fa fa-map-marker map-pin"></div>
+      BS9      
+    </a>
     <!-- NAV -->
-    <div class="nav-wrap">
-      <div class="burger top"></div>
-      <div class="burger mid"></div>
-      <div class="burger bot"></div>
-      <!-- NAV BUTTONS -->
-      <div class="nav-button left">BROWSE</div>
-      <div class="nav-button right">REPORT</div>
-    </div>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="../report/report.html" onclick="uncheck()">Report</a></li>
+      <li><a href="../browse/browse.html" onclick="uncheck()">Browse</a></li>
+    </ul>
+
   </div>
 
   <!-- CONTENT HEADER -->

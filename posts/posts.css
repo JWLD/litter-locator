@@ -1,6 +1,6 @@
 /*** RESET ***/
 
-body, div, img {
+body, div, img, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,6 +10,11 @@ body, div, img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 /*** STYLE ***/
@@ -23,7 +28,9 @@ body {
 /* TITLE BAR */
 
 .section-title {
-  position: relative;
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
   height: 60px;
   width: 100%;
   padding: 15px;
@@ -91,6 +98,7 @@ body {
 /* POST INFO */
 
 .post-info {
+  margin-top: 60px;
   flex-direction: column;
   width: 100%;
   padding: 20px;

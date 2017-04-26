@@ -1,62 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  margin: 0;
-  background-color: #f2f2f2;
-}
-
-.header {
-  z-index: 1;
-  width: 100%;
-  padding: 15px;
-  font: bold 20px Helvetica;
-  color: white;
-  background-color: #8BC74F;
-  box-shadow: 0 0 5px 1px #aaa;
-  position: fixed;
-}
-.postcode-search {
-  z-index: 1;
-  text-align: center;
-  padding: 0.5em 0.8em 0.5em 0.8em;
-  font-size: 14px;
-  position: absolute;
-  top: 60px;
-  left: 5px;
-  width: calc(100vw - 10px);
-  background-color: white;
-  outline-width: 0;
-}
-.postcode-search:focus {
-  placeholder: '';
-  text-align: left;
-}
-
-.postcode-search:focus::-webkit-input-placeholder {
-  color:transparent;
-}
-
-.map-container {
-  position:fixed;
-  top: -65px;
-  margin-bottom: -40px;
-  border: 0;
-  width: 100%;
-  height: calc(100% + 80px);
-}
-
-
 
 /* - v - DROPDOWN MENU - v -  */
-/*.header {
+.header {
   position: fixed;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   width: 100%;
@@ -83,8 +27,10 @@ body {
   font: 16px Helvetica;
   display: block;
   padding: 10px 10px;
+  /*border: 3px solid rgba(1,1,1,0.05);*/
   text-decoration: none;
   color: #666;
+  /*color: #8BC74F;*/
 }
 .header li {
   background-color: white;
@@ -106,6 +52,8 @@ body {
   transition: max-height .2s ease-out;
 }
 
+/* --hide dropdown as default --*/
+
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -144,6 +92,7 @@ body {
   top: -5px;
 }
 
+/* add the icon and menu animations when the checkbox is clicked */
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -153,6 +102,7 @@ body {
   right: 10px;
   user-select: none;
   padding: 0;
+  /*margin: 0 0 0 5em;*/
 
 }
 
@@ -175,6 +125,7 @@ body {
   position: absolute;
   transition: all .2s ease-out;
   width: 100%;
+  /*padding: 0;*/
 
 }
 
@@ -186,6 +137,7 @@ body {
   top: 5px;
 }
 
+/*  */
 
 .header .menu-btn {
   display: none;
@@ -208,6 +160,7 @@ body {
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
+  /*padding: 0;*/
 
 }
 
@@ -216,6 +169,11 @@ body {
   top: 0;
 }
 
+/*.header .menu-btn:checked ~ .header ul {
+  display: block;
+}*/
+
+/* add responsive css to show the horizontal menu items for larger browser widths by default */
 
 @media (min-width: 768px) {
   .header li {
@@ -232,6 +190,4 @@ body {
   .header .menu-icon {
     display: none;
   }
-}*/
-
-/* - ^ - DROPDOWN MENU - ^ -  */
+}
