@@ -1,0 +1,57 @@
+/* RESET */
+
+body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STYLE */
+
+body {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.logo {
+  width: 70vw;
+  height: 70vw;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 30px 10px #ccc;
+  background-image: url('../assets/litter-logo.png');
+  background-size: cover;
+}
+
+.button-wrap {
+  flex-direction: column;
+  width: 70vw;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 30px 5px #ccc;
+}
+
+.nav-button {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font: bold 8vw Helvetica;
+  background-color: #ccc;
+  color: #555;
+}
+
+.nav-button:not(:last-child) {
+  margin-bottom: 10px;
+}
