@@ -16,9 +16,60 @@ body, div {
 
 body {
   background-color: #f2f2f2;
-  min-height: 100vh;
   flex-direction: column;
 }
+
+/* HEADER */
+
+.section-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  padding: 15px;
+  font: bold 20px Helvetica;
+  color: white;
+  background-color: #8BC74F;
+  box-shadow: 0 0 15px 5px #ccc;
+}
+
+.section-title:active .nav-button {
+  transform: rotate(0deg);
+}
+
+.nav-button {
+  position: fixed;
+  top: 60px;
+  width: 50vw;
+  height: 50px;
+  color: #555;
+  background-color: #ccff66;
+  transition: 0.2s;
+}
+
+.nav-button.left {
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(90deg);
+}
+
+.nav-button.right {
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(-90deg);
+}
+
+/* MAIN CONTENT */
+
+.page-content {
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+/* LOGO */
 
 .logo {
   width: 70vw;
@@ -32,6 +83,8 @@ body {
   background-size: cover;
 }
 
+/* BUTTONS */
+
 .button-wrap {
   flex-direction: column;
   width: 70vw;
@@ -42,7 +95,7 @@ body {
   box-shadow: 0 0 30px 5px #ccc;
 }
 
-.nav-button {
+.main-nav-button {
   width: 100%;
   padding: 20px;
   border-radius: 5px;
@@ -52,6 +105,6 @@ body {
   color: #555;
 }
 
-.nav-button:not(:last-child) {
+.main-nav-button:not(:last-child) {
   margin-bottom: 10px;
 }
