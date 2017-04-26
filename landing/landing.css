@@ -1,6 +1,6 @@
 /* RESET */
 
-body, div {
+body, div, a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,6 +10,10 @@ body, div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* STYLE */
