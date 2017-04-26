@@ -12,20 +12,24 @@
   <!-- HEADER -->
   <div class="header">
     Find Litter Sites
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu">
-      <li><a href="#report-anchor" onclick="uncheck()">Report</a></li>
-      <li><a href="#browse-anchor" onclick="uncheck()">Browse</a></li>
-    </ul>
   </div>
 
   <!-- LOCATIONS -->
-    <input type="text" placeholder="Search Postcode" class="postcode-search">
+  <div class="postcode-search">
+      <input type="text" placeholder="search postcode">
+      <select name="Filter Search" class="">
+        <option value="All">All</option>
+        <option value="No action planned">No action planned</option>
+        <option value="Cleanup Planned">Cleanup Planned</option>
+      </select>
+  </div>
 
-      <iframe class="map-container" src="https://www.google.com/maps/d/u/0/embed?mid=1ZUR-fzmPR6lMFeAA_HbRIPabcq0">
+    <div class="map-container">
+
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZUR-fzmPR6lMFeAA_HbRIPabcq0">
       </iframe>
 
+    </div>
   <!-- </div> -->
 
 </body>
