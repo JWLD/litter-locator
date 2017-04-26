@@ -46,39 +46,57 @@ body {
 
 .map-container {
   position:fixed;
-  /*margin-top: -65px;*/
   top: -65px;
   margin-bottom: -40px;
   border: 0;
   width: 100%;
   height: calc(100% + 80px);
-  /*height: calc(568px + 70px);*/
 }
+
+
 
 /* - v - DROPDOWN MENU - v -  */
 .header {
-/*   background-color: TBC */
   position: fixed;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-/*   position: relative; */
   width: 100%;
   z-index: 3;
+  justify-content: space-between;
+  display: flex;
 }
 
 .header ul {
+  clear: both;
+  position: absolute;
+  top: 53px;
+  right: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: rgba(0,0,0,0.4);
+  background-color: #ccc;
+  text-align: center;
 }
 
 .header li a {
+  font: 16px Helvetica;
   display: block;
-  padding: 20px 20px;
-  border: 3px solid rgba(0,0,0,0.2);
+  padding: 10px 10px;
+  /*border: 3px solid rgba(1,1,1,0.05);*/
   text-decoration: none;
+  color: #666;
+  /*color: #8BC74F;*/
 }
+.header li {
+  background-color: white;
+}
+.header li {
+  margin: 8px;
+}
+/*.header li:not(:last-child) {
+  margin-bottom: 10px;
+}*/
 
 .header li a:hover {
   background-color: rgba(255,255,255,0.1);
@@ -139,6 +157,9 @@ body {
   position: relative;
   right: 10px;
   user-select: none;
+  padding: 0;
+  /*margin: 0 0 0 5em;*/
+
 }
 
 .header .menu-icon .navicon {
@@ -148,6 +169,7 @@ body {
   position: relative;
   transition: background .2s ease-out;
   width: 18px;
+
 }
 
 .header .menu-icon .navicon:before,
@@ -159,6 +181,8 @@ body {
   position: absolute;
   transition: all .2s ease-out;
   width: 100%;
+  /*padding: 0;*/
+
 }
 
 .header .menu-icon .navicon:before {
@@ -173,6 +197,7 @@ body {
 
 .header .menu-btn {
   display: none;
+
 }
 
 .header .menu-btn:checked ~ .menu {
@@ -185,10 +210,14 @@ body {
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
+  /*padding: 0;*/
+
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
+  /*padding: 0;*/
+
 }
 
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
@@ -196,9 +225,13 @@ body {
   top: 0;
 }
 
+/*.header .menu-btn:checked ~ .header ul {
+  display: block;
+}*/
+
 /* add responsive css to show the horizontal menu items for larger browser widths by default */
 
-@media (min-width: 48em) {
+@media (min-width: 768px) {
   .header li {
     float: left;
   }
@@ -214,3 +247,5 @@ body {
     display: none;
   }
 }
+
+/* - ^ - DROPDOWN MENU - ^ -  */
