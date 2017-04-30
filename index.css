@@ -83,7 +83,7 @@ body {
   border-radius: 50%;
   background-color: white;
   box-shadow: 0 0 30px 10px #ccc;
-  background-image: url('../assets/litter-logo.png');
+  background-image: url('./assets/litter-logo.png');
   background-size: cover;
 }
 
